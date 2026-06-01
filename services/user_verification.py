@@ -7,6 +7,29 @@ def signup(id:int,email:str,password:str):
     }
 
     return {
-        "message":"Login Successful",
+        "message":"Signup Successful",
+    }
+
+# login Code
+
+def login(id:int,email:str,password:str):
+    if id in store and (store[id]['email']==email and store[id]['password']==password):
+        return {
+            "message":"Login Successful",
+        }
+    return {
+        "message":"Login Failed",
+    }
+
+#logout Code
+
+def logout(id:int):
+    if id in store:
+        del store[id]
+        return {
+            "message":"Logout Successful",
+        }
+    return {
+        "message":"Logout Failed",
     }
 
