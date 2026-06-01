@@ -6,6 +6,10 @@ This python code helps us to use simple verifiction
 - login
 - logout
 
+## Testing
+
+- Handled Edge case
+
 ## signup 
 Used to register user info
 

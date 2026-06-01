@@ -1,6 +1,11 @@
 store={}
 # signup Code
 def signup(id:int,email:str,password:str):
+    if id in store:
+        return {
+            "message":"Already registered",
+        }
+
     store[id]={
         'email':email,
         'password':password,
@@ -33,3 +38,8 @@ def logout(id:int):
         "message":"Logout Failed",
     }
 
+def get_all_emails():
+    emails=[]
+    for i in store:
+        emails.append(store[i]['email'])
+    return emails
